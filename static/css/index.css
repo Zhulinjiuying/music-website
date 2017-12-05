@@ -1,17 +1,37 @@
 
 .nav {
+    display: flex;
     height: 60px;
     width: 100%;
     background: rgb(255, 212, 0);
 }
 
 .nav .logo {
-    margin-left: 20px;
-    position: relative;
-    display: inline-block;
+    flex: 0 0 100px;
 }
 
-.item-list {
+.nav .space {
+    flex: 1
+}
+
+.nav .item-list {
+    flex: 0 0 300px;
+    margin-right: 20px;
+}
+
+.nav .item-list .item {
     display: inline-block;
-    text-align: right;
+    width: 89px;
+    height: 29px;
+    padding-top: 29px;
+    border-top-width: 0px;
+    border: 1px solid rgb(255, 212, 0);
+    text-align: center;
+}
+
+.nav .item-list .item:hover {
+    background: #ff7b00;
+    border-radius: 1px;
+    border-top-width: 0px;
+    border: 1px solid #868686;
 }
