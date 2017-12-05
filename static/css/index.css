@@ -2,6 +2,7 @@
 .nav {
     height: 60px;
     width: 100%;
+    position: relative;
     background: rgb(255, 212, 0);
 }
 
