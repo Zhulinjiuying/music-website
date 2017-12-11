@@ -28,7 +28,7 @@
     border-top-width: 0px;
     border: 1px solid rgb(255, 212, 0);
     text-align: center;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .nav .item-list .item:hover {
@@ -36,16 +36,22 @@
     border-radius: 1px;
     border-top-width: 0px;
     border: 1px solid #868686;
+    cursor:pointer;
 }
 
-.nav .item-list .item.acitve {
+.nav .item-list .item.active {
     background: #ff7b00;
     border-radius: 1px;
     border-top-width: 0px;
     border: 1px solid #868686;
 }
 
+.main {
+    transition: display 3s;
+}
+
 .main img {
     width: 100%;
     height: 100%;
+    transition: 3s;
 }
