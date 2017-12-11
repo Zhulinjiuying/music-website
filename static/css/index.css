@@ -38,6 +38,13 @@
     border: 1px solid #868686;
 }
 
+.nav .item-list .item.acitve {
+    background: #ff7b00;
+    border-radius: 1px;
+    border-top-width: 0px;
+    border: 1px solid #868686;
+}
+
 .main img {
     width: 100%;
     height: 100%;
