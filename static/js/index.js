@@ -1,11 +1,13 @@
 var router = function(event, page) {
+    //路由函数
     if (event.target.className.indexOf('active') == -1) {    
         switchPage(page)
-        pushState(page)
+        pushState(page, 'switch')
     }
 }
 
 var switchPage = function(page) {
+    //切换页面
     var body = e('.main')
     var target = 0
     if (page == 'news') {
@@ -27,20 +29,22 @@ var switchPage = function(page) {
     elements[target].classList.add('active')
 }
 
-var pushState = function(page) {
+var pushState = function(page, target) {
     // 切换地址栏信息
     var url = ''
-    if (page == 'index') {
+    if (page !== 'index') {
+        url = 'index.html?page=' + page
+    } else {
         url = 'index.html'
     }
-    else {
-        url = 'index.html?page=' + page
-    }
     var state = {
-        page: page,
         title: document.title
     }
-    history.pushState(state, 'title', url)
+    if (target == 'switch') {
+        history.pushState(state, 'title', url)
+    } else if (target == 'init'){
+        history.replaceState(state, 'title', url)
+    }
     log('push state', state, page)
 }
 
@@ -53,11 +57,12 @@ var initApp = function() {
         for (let i = 0; i < validPages.length; i++) {
             if (validPages[i] == v) {
                 switchPage(validPages[i])
+                pushState(validPages[i], 'init')
             }
         }
     } else {
-        history.replaceState({ title: document.title }, 'title', 'index.html')
         switchPage('index')
+        pushState('index', 'init')
     }
 }
 
@@ -66,7 +71,6 @@ var _main = function() {
     window.addEventListener("popstate", function(e) {
         var state = e.state;
         // state 就是 pushState 的第一个参数
-        log('pop state', state)
         initApp()
         document.title = state.title
     })
