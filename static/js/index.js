@@ -30,7 +30,7 @@ var switchPage = function(page) {
 }
 
 var pushState = function(page, target) {
-    // 切换地址栏信息
+    // 切换地址栏信息和添加历史信息
     var url = ''
     if (page !== 'index') {
         url = 'index.html?page=' + page
