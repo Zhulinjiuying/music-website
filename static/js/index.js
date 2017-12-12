@@ -56,13 +56,13 @@ var initApp = function() {
             }
         }
     } else {
+        history.replaceState({ title: document.title }, 'title', 'index.html')
         switchPage('index')
     }
 }
 
 var _main = function() {
     initApp()
-    history.replaceState({ title: document.title }, 'title', 'index.html')
     window.addEventListener("popstate", function(e) {
         var state = e.state;
         // state 就是 pushState 的第一个参数
