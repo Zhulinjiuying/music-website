@@ -53,5 +53,14 @@
 .main img {
     width: 100%;
     height: 100%;
-    transition: 3s;
+    animation: 1s switch;
+}
+
+@keyframes switch {
+    0% {
+        opacity: 0.25;
+    }
+    100% {
+        opacity: 1;
+    }
 }
