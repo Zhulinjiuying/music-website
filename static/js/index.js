@@ -45,7 +45,6 @@ var pushState = function(page, target) {
     } else if (target == 'init'){
         history.replaceState(state, 'title', url)
     }
-    log('push state', state, page)
 }
 
 var initApp = function() {
