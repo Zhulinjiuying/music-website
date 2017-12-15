@@ -3,7 +3,15 @@ var router = function(event, page) {
     if (event.target.className.indexOf('active') == -1) {    
         switchPage(page)
         pushState(page, 'switch')
+        toggleMenu()
     }
+}
+
+var toggleMenu = function() {
+    var icon = e('.item-icon')
+    toggleClass(icon, 'active')
+    var menu = e('.item-list')
+    toggleClass(menu, 'active')
 }
 
 var switchPage = function(page) {

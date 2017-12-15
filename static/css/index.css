@@ -15,35 +15,81 @@
     flex: 1
 }
 
-.nav .item-list {
-    flex: 0 0 300px;
-    margin-right: 20px;
+@media all and (min-width: 456px) {
+    .nav .item-icon {
+        display: none
+    }
+
+    .nav .item-list {
+        flex: 0 0 300px;
+        margin-right: 20px;
+    }
+    
+    .nav .item-list .item {
+        display: inline-block;
+        width: 89px;
+        height: 29px;
+        padding-top: 29px;
+        border-top-width: 0px;
+        border: 1px solid rgb(255, 212, 0);
+        text-align: center;
+        transition: 0.5s;
+    }
+    
+    .nav .item-list .item:hover {
+        background: #ff7b00;
+        border-radius: 1px;
+        border-top-width: 0px;
+        border: 1px solid #868686;
+        cursor:pointer;
+    }
+    
+    .nav .item-list .item.active {
+        background: #ff7b00;
+        border-radius: 1px;
+        border-top-width: 0px;
+        border: 1px solid #868686;
+    }
 }
 
-.nav .item-list .item {
-    display: inline-block;
-    width: 89px;
-    height: 29px;
-    padding-top: 29px;
-    border-top-width: 0px;
-    border: 1px solid rgb(255, 212, 0);
-    text-align: center;
-    transition: 0.5s;
-}
+@media all and (max-width: 455px) {
+    .nav .item-icon {
+        flex: 0 0 59px;
+        position: relative;
+        display: inline-block;
+        border-left: 1px solid #868686;
+    }
 
-.nav .item-list .item:hover {
-    background: #ff7b00;
-    border-radius: 1px;
-    border-top-width: 0px;
-    border: 1px solid #868686;
-    cursor:pointer;
-}
+    .nav .item-icon.active {
+        background: #ff7b00;
+    }
 
-.nav .item-list .item.active {
-    background: #ff7b00;
-    border-radius: 1px;
-    border-top-width: 0px;
-    border: 1px solid #868686;
+    .nav .item-list{
+        display: none;
+        animation: 1s switch;
+    }
+
+    .nav .item-list.active {
+        display: block;
+        position: absolute;
+        top: 60px;
+        right: 0px;
+        z-index: 100;
+    }
+
+    .nav .item-list .item {
+        width: 90px;
+        height: 39px;
+        display: block;
+        text-align: center;
+        transition: 0.5s;
+        background: rgb(255, 212, 0);
+        border-bottom: 1px solid #868686;    
+    }
+
+    .nav .item-list .item.active {
+        background: #ff7b00;
+    }
 }
 
 .main img {
