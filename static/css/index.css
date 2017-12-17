@@ -11,7 +11,7 @@
     flex: 0 0 100px;
 }
 
-.nav .space {
+.space {
     flex: 1
 }
 
@@ -105,4 +105,50 @@
     100% {
         opacity: 1;
     }
+}
+
+.footer {
+    display: flex;
+    height: 200px;
+    width: 100%;
+    background: rgb(255, 212, 0);
+}
+
+.footer .info {
+    width: 455px;
+    margin: 20px 0px;
+    border-left: 1px solid #868686;
+    border-right: 1px solid #868686;
+}
+
+.footer .info .map {
+    display: inline-block;
+    width: 160px;
+    height: 159px;
+    margin: 0px 5px 0px 10px;
+    border: 1px solid #ccc;
+}
+
+.iw_poi_title {
+    color:#CC5522;
+    font-size:14px;
+    font-weight:bold;
+    overflow:hidden;
+    padding-right:13px;
+    white-space:nowrap
+}
+
+.iw_poi_content {
+    font:12px arial,sans-serif;
+    overflow:visible;
+    padding-top:4px;
+    white-space:-moz-pre-wrap;
+    word-wrap:break-word
+}
+
+
+.footer .info .intro {
+    display: inline-block;
+    margin: 0px 10px 0px 5px;
+    vertical-align: top;
 }

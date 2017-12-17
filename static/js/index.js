@@ -81,6 +81,7 @@ var _main = function() {
         initApp()
         document.title = state.title
     })
+    initMap()
 }
 
 _main()
