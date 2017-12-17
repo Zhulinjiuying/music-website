@@ -149,6 +149,7 @@
 
 .footer .info .intro {
     display: inline-block;
-    margin: 0px 10px 0px 5px;
     vertical-align: top;
+    margin: 0px 10px 0px 5px;
+    line-height: 42px;
 }
