@@ -60,6 +60,8 @@ var initApp = function() {
     var query = location.search
     var [k, v] = query.slice(1).split('=')
     var validPages = ['news', 'details']
+    var body = e('.main');
+    toggleClass(body, 'active')
     if (k == 'page') {
         for (let i = 0; i < validPages.length; i++) {
             if (validPages[i] == v) {
@@ -84,4 +86,6 @@ var _main = function() {
     initMap()
 }
 
-_main()
+setTimeout(function() {
+    _main()
+} , 3000)

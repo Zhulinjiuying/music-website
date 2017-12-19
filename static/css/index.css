@@ -1,3 +1,7 @@
+* {
+    font-family:
+    "Microsoft yahei";
+}
 
 .nav {
     display: flex;
@@ -90,6 +94,16 @@
     .nav .item-list .item.active {
         background: #ff7b00;
     }
+}
+
+.main {
+    position: relative;
+    width:100%;
+    height: 300px;
+}
+
+.main.active {
+    height: 100%;
 }
 
 .main img {
